@@ -73,7 +73,7 @@ header img {
     background-color: #18453B;
 }
 
-marquee {
+.marquee-wrapper {
     grid-area: marquee;
     background-color: #18453B;
     border: 2px solid #FFFFFF;
@@ -81,6 +81,22 @@ marquee {
     padding: 5px;
     font-weight: bold;
     font-size: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee-scroll 40s linear infinite;
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .board-member {

@@ -1,13 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     const bannerMessages = ["Welcome Spartans!", "New Website!"];
-    const marquee = document.querySelector('marquee');
-    if (marquee) {
-        // Create a large spacer with non-breaking spaces and a visual separator
-        const spacer = "&nbsp;".repeat(30) + "★" + "&nbsp;".repeat(30);
+    const marqueeWrapper = document.querySelector('.marquee-wrapper');
+    
+    if (marqueeWrapper) {
+        // Clear loading text
+        marqueeWrapper.innerHTML = '';
         
-        // Repeat the entire message set multiple times to ensure even spacing and continuous flow
-        const repeatedContent = new Array(15).fill(bannerMessages.join(spacer)).join(spacer);
+        // Create the content container
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'marquee-content';
         
-        marquee.innerHTML = repeatedContent;
+        // Create a single set of messages
+        const spacer = "&nbsp;".repeat(20) + "★" + "&nbsp;".repeat(20);
+        const messageString = bannerMessages.join(spacer) + spacer;
+        
+        // Duplicate the content for seamless looping
+        // We repeat it enough times to cover the screen, then double THAT for the seamless effect
+        const singleSet = messageString;
+        const repeatedSet = new Array(5).fill(singleSet).join('');
+        
+        contentDiv.innerHTML = repeatedSet + repeatedSet;
+        
+        marqueeWrapper.appendChild(contentDiv);
     }
 });
