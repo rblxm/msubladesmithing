@@ -1,0 +1,284 @@
+/* Retro MSU Bladesmithing Website Stylesheet */
+
+body {
+    background-color: #18453B; /* MSU Green fallback */
+    background-image: url('../images/fire.svg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFFFF; /* White text */
+    font-family: "MSU Garamond", "Times New Roman", serif;
+    margin: 20px;
+    padding: 0;
+    cursor: url('https://cdn.cursors-4u.net/previews/metal-set-handwriting-c02c7b50-32.webp') 28 36, auto;
+}
+
+a, button, .button-link, nav ul li a {
+    cursor: url('https://cdn.cursors-4u.net/previews/metal-set-handwriting-c02c7b50-32.webp') 28 36, pointer;
+}
+
+/* Main Grid Layout */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "marquee marquee"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-gap: 15px;
+    max-width: 1000px; /* Reverted from 1200px */
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Individual Boxes */
+header, nav, main, footer {
+    background-color: #18453B;
+    border: 2px solid #FFFFFF;
+    padding: 15px;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    height: 180px;
+    width: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.board-info h4 {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+.interest-icons {
+    display: inline-flex;
+    gap: 3px;
+    margin: 0 8px;
+}
+
+.interest-icons img {
+    width: 22px;
+    height: 22px;
+    background-color: #18453B;
+}
+
+marquee {
+    grid-area: marquee;
+    background-color: #18453B;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.board-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.board-photo {
+    width: 180px; /* Reverted from 250px */
+    height: 180px; /* Reverted from 250px */
+    border: 2px solid #FFFFFF;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.meeting-split {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.meeting-box {
+    flex: 1;
+    border: 2px solid #FFFFFF;
+    padding: 15px;
+    text-align: center;
+}
+
+.meeting-box h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+.blog-post {
+    margin-bottom: 30px;
+    /* Reverted from having padding and background-color */
+}
+
+.blog-post header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    grid-area: auto;
+    padding: 0;
+}
+
+.blog-post header h3 {
+    margin: 0;
+    border: none;
+}
+
+.blog-post .post-date {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.blog-post .post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Removed align-items: center; and justify-content: center; */
+}
+
+.blog-post .post-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #FFFFFF;
+}
+
+.blog-post .post-content p {
+    margin: 0;
+    flex: 1;
+}
+
+.board-info {
+    flex-grow: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    grid-area: sidebar;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+    border: 1px transparent;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    background-color: #ffffff;
+    color: #18453B;
+}
+
+main {
+    grid-area: content;
+    min-height: 400px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* Typography & Elements */
+h2, h3 {
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 5px;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #FFFFFF;
+    padding: 8px;
+    text-align: left;
+}
+
+.countdown-box {
+    border: 2px solid #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button-link:hover {
+    background-color: #FFFFFF;
+    color: #18453B;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.gallery-item {
+    border: 1px solid #FFFFFF;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}

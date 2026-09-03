@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MSU Bladesmithing - TMS Competition</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logos/JollyRodgerOnGreen.jpg" alt="MSU Bladesmithing Logo">
+            <h1>MSU Bladesmithing</h1>
+        </header>
+
+        <marquee>Artfire on Thursday! 6-9PM! FREE!</marquee>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">[ HOME ]</a></li>
+                <li><a href="board.html">[ BOARD ]</a></li>
+                <li><a href="meetings.html">[ MEETINGS ]</a></li>
+                <li><a href="safety.html">[ SAFETY ]</a></li>
+                <li><a href="gallery.html">[ GALLERY ]</a></li>
+                <li><a href="competition.html">[ TMS COMP. ]</a></li>
+                <li><a href="resources.html">[ RESOURCES ]</a></li>
+                <li><a href="contact.html">[ CONTACT ]</a></li>
+                <li><a href="blog.html">[ BLOG ]</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>TMS Bladesmithing Competition</h2>
+
+            <div id="countdown" class="countdown-box">
+                Loading countdown...
+            </div>
+
+            <script>
+                // Target date for the competition (March 1, 2027)
+                var countDate = new Date("March 1, 2027 00:00:00").getTime();
+
+                function tmsCountdown() {
+                    var now = new Date().getTime();
+                    var gap = countDate - now;
+
+                    var second = 1000;
+                    var minute = second * 60;
+                    var hour = minute * 60;
+                    var day = hour * 24;
+
+                    var d = Math.floor(gap / day);
+                    var h = Math.floor((gap % day) / hour);
+                    var m = Math.floor((gap % hour) / minute);
+                    var s = Math.floor((gap % minute) / second);
+
+                    document.getElementById("countdown").innerText = d + " Days " + h + " Hours " + m + " Minutes " + s + " Seconds";
+                }
+
+                setInterval(tmsCountdown, 1000);
+            </script>
+
+            <p>The club's original quest: to participate in The Minerals, Metals & Materials Society (TMS) biannual bladesmithing competition. It is our chance to flex our MSE muscles on an international stage.</p>
+            
+            <h3>Competition Overview</h3>
+            <p>Students will design, plan and execute a unique materials process to create a blade. This will be accompanied by a video presentation, conference poster and a full technical report involving laboratory analysis (worth the most points). All deliverables will be scored individually and then combined with overarching categories and additional awards to determine the winner.</p>
+
+            <h3>The Competition Team</h3>
+            <p>The TMS Competition demands dedication and real materials science know-how from its participating teams. The competition is academic in nature and designed for the purpose of furthering MSE careers. Our club's competition team will reflect this and give preference to MSE or MSE inclined students. </p>
+            <p>Each member will be assigned to a specific deliverable but will assist others depending on skillset and need. Everyone is accountable for the team's success and therefore required to be at every meeting and expected to commit extra time if necessary.</p>
+        </main>
+
+        <footer>
+            <p>2026 MSU Bladesmithing Club Net Neighbors: <a href="https://www.egr.msu.edu/" target="_blank">College of Engineering</a> | <a href="https://www.chems.msu.edu/" target="_blank">ChEMS Department</a> | <a href="https://msesmsu.wixsite.com/home" target="_blank">MSU MSES</a> | <a href="https://www.artfiremichigan.com/" target="_blank">Artfire Michigan</a></p>
+        </footer>
+    </div>
+</body>
+</html>
