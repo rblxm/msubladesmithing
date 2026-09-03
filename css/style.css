@@ -91,7 +91,7 @@ header img {
 .marquee-content {
     display: inline-flex;
     white-space: nowrap;
-    animation: marquee-scroll 40s linear infinite;
+    animation: marquee-scroll 65s linear infinite;
 }
 
 @keyframes marquee-scroll {
